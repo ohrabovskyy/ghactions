@@ -9,7 +9,7 @@ on:
       - master
 
 env:
-  WEBAPP_NAME: gh-actions    # Azure Web App Name
+  WEBAPP_NAME: 'gh-actions'    # Azure Web App Name
   WEBAPP_PACKAGE_PATH: '.'   # Project Path Location default to root(.)  
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 13.x
+        node-version: 14.x
     
     - name: Install NPM packages
       run: npm ci
@@ -58,5 +58,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with: 
         app-name: ${{ env.WEBAPP_NAME }} 
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }} 
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }} 
         package: ${{ env.WEBAPP_PACKAGE_PATH }}
