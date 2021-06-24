@@ -9,7 +9,7 @@ on:
       - master
 
 env:
-  WEBAPP_NAME: 'gh-actions'    # Azure Web App Name
+  WEBAPP_NAME: 'gh-actions' # Azure Web App Name
   WEBAPP_PACKAGE_PATH: './build'   # Project Path Location default to root(.)  
 
 jobs:
