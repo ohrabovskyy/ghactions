@@ -53,6 +53,3 @@ jobs:
       with:
         name: production-files
         path: ./build
-
-    - name: 'Run React app'
-      run: npm start
